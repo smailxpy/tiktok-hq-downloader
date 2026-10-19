@@ -1,0 +1,18 @@
+[Unit]
+Description=TikTok HQ Downloader Telegram Bot
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=__BOT_USER__
+WorkingDirectory=__BOT_HOME__/tiktok_hq_bot
+ExecStart=__BOT_HOME__/tiktok_hq_bot/.venv/bin/python -m bot.main
+Restart=on-failure
+RestartSec=10
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

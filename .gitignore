@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+downloads/
+*.mp4
+*.mkv
+*.webm
+*.session
+cookies.txt
+*.pem
+*.key
